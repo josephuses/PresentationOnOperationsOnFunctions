@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "FunctionOperations.html#overview",
+    "href": "FunctionOperations.html#overview",
+    "title": "Operations on Functions",
+    "section": "Overview",
+    "text": "Overview\nWe will explore how to construct new functions using:\n\nArithmetic Operations: Addition, Subtraction, Multiplication\nDivision: Quotients (Factoring vs. Long Division)\nComposition: Chaining functions together"
+  },
+  {
+    "objectID": "FunctionOperations.html#video-tutorial-operations-on-functions",
+    "href": "FunctionOperations.html#video-tutorial-operations-on-functions",
+    "title": "Operations on Functions",
+    "section": "Video Tutorial: Operations on Functions",
+    "text": "Video Tutorial: Operations on Functions\n\n\nSource: The Organic Chemistry Tutor"
+  },
+  {
+    "objectID": "FunctionOperations.html#definitions-rules",
+    "href": "FunctionOperations.html#definitions-rules",
+    "title": "Operations on Functions",
+    "section": "Definitions & Rules",
+    "text": "Definitions & Rules\nGiven two functions \\(f\\) and \\(g\\):\n\n\n\nOperation\nNotation\nRule\n\n\n\n\nSum\n\\((f+g)(x)\\)\n\\(f(x) + g(x)\\)\n\n\nDifference\n\\((f-g)(x)\\)\n\\(f(x) - g(x)\\)\n\n\nProduct\n\\((f \\cdot g)(x)\\)\n\\(f(x) \\cdot g(x)\\)\n\n\n\nNotation: Let \\(D_f\\) be the domain of \\(f\\) and \\(D_g\\) be the domain of \\(g\\). The following notation applies.\n\n\n\nOperation\nDomain Notation\n\n\n\n\n\\((f+g)(x)\\)\n\\(D_{f+g}\\)\n\n\n\\((f-g)(x)\\)\n\\(D_{f-g}\\)\n\n\n\\((f\\cdot g)(x)\\)\n\\(D_{f\\cdot g}\\)\n\n\n\nDomain Rule: The result is valid only where both \\(f\\) and \\(g\\) are valid (\\(D_f \\cap D_g\\))."
+  },
+  {
+    "objectID": "FunctionOperations.html#example-1-polynomials",
+    "href": "FunctionOperations.html#example-1-polynomials",
+    "title": "Operations on Functions",
+    "section": "Example 1: Polynomials",
+    "text": "Example 1: Polynomials\nLet \\(f(x) = 3x + 2\\) and \\(g(x) = x - 5\\).\nAddition: \\[(f+g)(x) = (3x+2) + (x-5) = \\mathbf{4x - 3}\\]\nSubtraction: \\[(f-g)(x) = (3x+2) - (x-5) = \\mathbf{2x + 7}\\]\nMultiplication: \\[(f \\cdot g)(x) = (3x+2)(x-5) = \\mathbf{3x^2 - 13x - 10}\\]\nDomain:\n\n\\(D_f = \\mathbb{R}\\)\n\\(D_g = \\mathbb{R}\\)\n\\(D_{f\\cap g} = \\mathbb{R}\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#example-2-radicals-domain-focus",
+    "href": "FunctionOperations.html#example-2-radicals-domain-focus",
+    "title": "Operations on Functions",
+    "section": "Example 2: Radicals (Domain Focus)",
+    "text": "Example 2: Radicals (Domain Focus)\nLet \\(f(x) = \\sqrt{x}\\) and \\(g(x) = \\sqrt{4-x}\\).\nOperation: Find \\((f+g)(x)\\). \\[(f+g)(x) = \\sqrt{x} + \\sqrt{4-x}\\]\nFinding the Domain:\n\nFor \\(\\sqrt{x}\\), we need \\(x \\ge 0\\). That is, \\(D_f=[0,\\infty)\\)\nFor \\(\\sqrt{4-x}\\), we need \\(4-x \\ge 0 \\Rightarrow x \\le 4\\). That is, \\(D_g=(-\\infty,4]\\)\nIntersection: The domain is \\(D_{f+g}=D_f\\cap D_g = [0,\\infty)\\cap (-\\infty,4]=[0, 4]\\)."
+  },
+  {
+    "objectID": "FunctionOperations.html#example-3-rational-functions",
+    "href": "FunctionOperations.html#example-3-rational-functions",
+    "title": "Operations on Functions",
+    "section": "Example 3: Rational Functions",
+    "text": "Example 3: Rational Functions\nLet \\(f(x) = \\frac{1}{x}\\) and \\(g(x) = \\frac{2}{x+3}\\).\nOperation: Find \\((f+g)(x)\\).\n\\[\\frac{1}{x} + \\frac{2}{x+3}\\]\nLCD: \\(x(x+3)\\) \\[= \\frac{1(x+3) + 2(x)}{x(x+3)} = \\frac{x + 3 + 2x}{x(x+3)} = \\mathbf{\\frac{3x+3}{x(x+3)}}\\]\n\nFor \\(f(x) = \\frac{1}{x}\\), we need \\(x \\neq 0\\). That is, \\(D_f=(-\\infty,0)\\cup(0,\\infty)\\).\nFor \\(g(x)=\\frac{2}{x+3}\\), we need \\(x+3\\neq0 \\Rightarrow x \\neq -3\\). That is, \\(D_g=(-\\infty,-3)\\cup (-3,\\infty)\\)\nIntersection: The domain is \\(D_{f+g}=(-\\infty, -3)\\cup (-3,0)\\cup(0,\\infty)=\\mathbb{R}\\setminus \\{-3,0\\}\\)."
+  },
+  {
+    "objectID": "FunctionOperations.html#video-tutorial-polynomial-long-division",
+    "href": "FunctionOperations.html#video-tutorial-polynomial-long-division",
+    "title": "Operations on Functions",
+    "section": "Video Tutorial: Polynomial Long Division",
+    "text": "Video Tutorial: Polynomial Long Division\n\n\nSource: The Organic Chemistry Tutor"
+  },
+  {
+    "objectID": "FunctionOperations.html#definition",
+    "href": "FunctionOperations.html#definition",
+    "title": "Operations on Functions",
+    "section": "Definition",
+    "text": "Definition\n\\[ \\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)}, \\quad \\text{where } g(x) \\neq 0 \\]\nThe domain is the intersection of domains, excluding any that makes the denominator zero."
+  },
+  {
+    "objectID": "FunctionOperations.html#example-1-factoring-simplifying",
+    "href": "FunctionOperations.html#example-1-factoring-simplifying",
+    "title": "Operations on Functions",
+    "section": "Example 1: Factoring (Simplifying)",
+    "text": "Example 1: Factoring (Simplifying)\nLet \\(f(x) = x^2 - 9\\) and \\(g(x) = x - 3\\).\n\\[ \\left(\\frac{f}{g}\\right)(x) = \\frac{x^2 - 9}{x - 3} = \\frac{(x+3)(x-3)}{x-3}=x+3\\]\n\nRestriction: \\(x \\neq 3\\) (from original denominator). That is \\(D_{f/g}=(-\\infty,3)\\cup(3,\\infty)=\\mathbb{R}\\setminus\\{3\\}\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#example-2-long-division",
+    "href": "FunctionOperations.html#example-2-long-division",
+    "title": "Operations on Functions",
+    "section": "Example 2: Long Division",
+    "text": "Example 2: Long Division\nDivide \\(f(x) = 3x^2 + 7x + 5\\) by \\(g(x) = x + 2\\).\nSolution\n\\[\\require{enclose}\n\\begin{array}{rll}\n3x + 1 && \\\\[-3pt]\nx + 2 \\enclose{longdiv}{3x^2 + 7x + 5}\\kern-.2ex \\\\[-3pt]\n\\underline{-(3x^2 + 6x)} \\phantom{+ 5} && \\\\[-3pt]\nx + 5 && \\\\[-3pt]\n\\underline{-(x + 2)} && \\\\[-3pt]\n3 && (\\text{Remainder})\n\\end{array}\\]\n\nQuotient: \\(3x + 1 + \\frac{3}{x+2}\\)\nRestriction: \\(x\\neq-2\\)\nDomain: \\(D_{f/g}=\\mathbb{R}\\setminus\\{-2\\}\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#example-3-complex-fractions",
+    "href": "FunctionOperations.html#example-3-complex-fractions",
+    "title": "Operations on Functions",
+    "section": "Example 3: Complex Fractions",
+    "text": "Example 3: Complex Fractions\nLet \\(f(x)=\\frac{x}{x+1}\\) and \\(g(x)=\\frac{2}{x}\\).\n\\[ \\left(\\frac{f}{g}\\right)(x) = \\frac{\\frac{x}{x+1}}{\\frac{2}{x}} \\]\nMultiply by the reciprocal of the divisor: \\[ \\frac{x}{x+1} \\cdot \\frac{x}{2} = \\mathbf{\\frac{x^2}{2(x+1)}} \\]\n\nDomain: \\(x \\neq -1\\) and \\(x \\neq 0\\), so \\(D_{f/g}=\\mathbb{R}\\setminus\\{-1,0\\}=(-\\infty,-1)\\cup(-1,0)\\cup(0,\\infty)=\\{x\\in \\mathbb{R}|x\\neq-1,x\\neq0\\}\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#video-tutorial-composition",
+    "href": "FunctionOperations.html#video-tutorial-composition",
+    "title": "Operations on Functions",
+    "section": "Video Tutorial: Composition",
+    "text": "Video Tutorial: Composition\n\n\nSource: The Organic Chemistry Tutor"
+  },
+  {
+    "objectID": "FunctionOperations.html#concept-visualization",
+    "href": "FunctionOperations.html#concept-visualization",
+    "title": "Operations on Functions",
+    "section": "Concept & Visualization",
+    "text": "Concept & Visualization\nThe output of the first function (\\(g\\)) becomes the input of the second (\\(f\\)).\n\n\n\n\n\ngraph LR\n    A[Input x] --&gt;|g| B[Output g]\n    B --&gt;|f| C[Final Output]\n    style A fill:#fff,stroke:#333\n    style B fill:#ffa,stroke:#333\n    style C fill:#afa,stroke:#333"
+  },
+  {
+    "objectID": "FunctionOperations.html#example-1-basic-polynomials",
+    "href": "FunctionOperations.html#example-1-basic-polynomials",
+    "title": "Operations on Functions",
+    "section": "Example 1: Basic Polynomials",
+    "text": "Example 1: Basic Polynomials\nLet \\(f(x) = 2x - 1\\) and \\(g(x) = x^2\\).\nA. Find \\((f\\circ g)(x)\\) \\[ f(g(x)) = f(x^2) = 2(x^2) - 1 = \\mathbf{2x^2 - 1} \\]\nB. Find \\((g\\circ f)(x)\\) \\[ g(f(x)) = g(2x-1) = (2x-1)^2 = \\mathbf{4x^2 - 4x + 1} \\]"
+  },
+  {
+    "objectID": "FunctionOperations.html#example-2-radical-functions",
+    "href": "FunctionOperations.html#example-2-radical-functions",
+    "title": "Operations on Functions",
+    "section": "Example 2: Radical Functions",
+    "text": "Example 2: Radical Functions\nLet \\(f(x) = \\sqrt{x}\\) and \\(g(x) = x - 2\\).\nFind \\((f \\circ g)(x)\\):\n\\[ f(g(x)) = f(x-2) = \\mathbf{\\sqrt{x-2}} \\] Domain: \\(\\{x|x \\ge 2\\}=[2,\\infty)\\).\nFind \\((g \\circ f)(x)\\):\n\\[ g(f(x)) = g(\\sqrt{x}) = \\mathbf{\\sqrt{x} - 2} \\]\nDomain: \\(\\{x|x\\ge 0\\}=[0,\\infty)\\)."
+  },
+  {
+    "objectID": "FunctionOperations.html#example-3-evaluation",
+    "href": "FunctionOperations.html#example-3-evaluation",
+    "title": "Operations on Functions",
+    "section": "Example 3: Evaluation",
+    "text": "Example 3: Evaluation\nLet \\(p(x) = x^2 + 1\\) and \\(q(x) = 3x\\).\nFind \\((p \\circ q)(2)\\):\nMethod 1: Inner first\n\n\\(q(2) = 3(2) = 6\\)\n\\(p(q(2)) = p(6) = 6^2 + 1 = 37\\)\n\nMethod 2: Equation first\n\n\\(p(q(x)) = p(3x) = (3x)^2 + 1 = 9x^2 + 1\\)\n\\(9(2)^2 + 1 = 36 + 1 = 37\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#summary",
+    "href": "FunctionOperations.html#summary",
+    "title": "Operations on Functions",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nConcept\nKey Takeaway\n\n\n\n\nAdd/Sub/Mult\nCombine outputs. Intersect domains.\n\n\nDivision\nDenom \\(\\neq0\\). Use factoring or long division.\n\n\nComposition\nOrder matters! Inside function goes first."
+  }
+]
