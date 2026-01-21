@@ -1,0 +1,7 @@
+project:
+  title: "FunctionOperations"
+  type: website
+  output-dir: docs
+
+editor: visual
+

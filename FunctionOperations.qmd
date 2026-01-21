@@ -1,0 +1,285 @@
+---
+title: "Operations on Functions"
+subtitle: "Based on the Math 2: Modules 1-3 by Melodee Pacio"
+author: "Joseph S. Tabadero, Jr."
+institute: "Philippine Science High School CAR Campus in Baguio City"
+format:
+  revealjs:
+    theme: serif
+    transition: slide
+    slide-number: true
+    width: 1280
+    height: 720
+    chalkboard: true
+    scrollable: true
+    css: styles.css
+---
+
+## Overview
+
+We will explore how to construct new functions using:
+
+1.  **Arithmetic Operations**: Addition, Subtraction, Multiplication
+2.  **Division**: Quotients (Factoring vs. Long Division)
+3.  **Composition**: Chaining functions together
+
+---
+
+# Part 1: Arithmetic Operations
+
+## Video Tutorial: Operations on Functions
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3gaxVHVI4cI?si=4xXxZeXJjNkNg19k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<small>Source: The Organic Chemistry Tutor</small>
+
+## Definitions & Rules
+
+Given two functions $f$ and $g$:
+
+| Operation | Notation | Rule |
+|---|---|---|
+| **Sum** | $(f+g)(x)$ | $f(x) + g(x)$ |
+| **Difference** | $(f-g)(x)$ | $f(x) - g(x)$ |
+| **Product** | $(f \cdot g)(x)$ | $f(x) \cdot g(x)$ |
+
+**Notation:** Let $D_f$ be the domain of $f$ and $D_g$ be the domain of $g$. The following notation applies.
+
+| Operation | Domain Notation |
+|---|---|
+|$(f+g)(x)$ | $D_{f+g}$ |
+|$(f-g)(x)$ | $D_{f-g}$ |
+|$(f\cdot g)(x)$ | $D_{f\cdot g}$ |
+
+**Domain Rule:** The result is valid only where **both** $f$ and $g$ are valid ($D_f \cap D_g$).
+
+## Example 1: Polynomials
+
+Let $f(x) = 3x + 2$ and $g(x) = x - 5$.
+
+**Addition:**
+$$(f+g)(x) = (3x+2) + (x-5) = \mathbf{4x - 3}$$
+
+**Subtraction:**
+$$(f-g)(x) = (3x+2) - (x-5) = \mathbf{2x + 7}$$
+
+**Multiplication:**
+$$(f \cdot g)(x) = (3x+2)(x-5) = \mathbf{3x^2 - 13x - 10}$$
+
+**Domain:**
+
+* $D_f = \mathbb{R}$
+* $D_g = \mathbb{R}$
+* $D_{f\cap g} = \mathbb{R}$
+
+## Example 2: Radicals (Domain Focus)
+
+Let $f(x) = \sqrt{x}$ and $g(x) = \sqrt{4-x}$.
+
+**Operation:** Find $(f+g)(x)$.
+$$(f+g)(x) = \sqrt{x} + \sqrt{4-x}$$
+
+**Finding the Domain:**
+
+1.  For $\sqrt{x}$, we need $x \ge 0$. That is, $D_f=[0,\infty)$
+2.  For $\sqrt{4-x}$, we need $4-x \ge 0 \Rightarrow x \le 4$. That is, $D_g=(-\infty,4]$
+3.  **Intersection:** The domain is **$D_{f+g}=D_f\cap D_g = [0,\infty)\cap (-\infty,4]=[0, 4]$**.
+
+## Example 3: Rational Functions
+
+Let $f(x) = \frac{1}{x}$ and $g(x) = \frac{2}{x+3}$.
+
+**Operation:** Find $(f+g)(x)$.
+
+$$\frac{1}{x} + \frac{2}{x+3}$$
+
+**LCD:** $x(x+3)$
+$$= \frac{1(x+3) + 2(x)}{x(x+3)} = \frac{x + 3 + 2x}{x(x+3)} = \mathbf{\frac{3x+3}{x(x+3)}}$$
+
+1.  For $f(x) = \frac{1}{x}$, we need $x \neq 0$. That is, $D_f=(-\infty,0)\cup(0,\infty)$.
+2.  For $g(x)=\frac{2}{x+3}$, we need $x+3\neq0 \Rightarrow x \neq -3$. That is, $D_g=(-\infty,-3)\cup (-3,\infty)$
+3.  **Intersection:** The domain is **$D_{f+g}=(-\infty, -3)\cup (-3,0)\cup(0,\infty)=\mathbb{R}\setminus \{-3,0\}$**.
+
+---
+
+
+### Adjust slopes to see the Sum function
+
+```{ojs}
+//| echo: false
+//| panel: sidebar
+
+viewof m = Inputs.range([-5, 5], {value: 1, step: 0.5, label: "Slope f(x)"})
+viewof b = Inputs.range([-5, 5], {value: 2, step: 0.5, label: "Intercept g(x)"})
+```
+
+```{ojs}
+//| echo: false
+
+//| echo: false
+//| echo: false
+Plot.plot({
+  grid: true,
+  y: {domain: [-15, 15]},
+  x: {domain: [-5, 5]},
+  marks: [
+    // 1. DRAW AXES THROUGH CENTER (0,0)
+    Plot.ruleX([0]),
+    Plot.ruleY([0]),
+
+    // 2. Red Line f(x)
+    Plot.line(d3.range(-5, 5.1, 0.1).map(x => ({x, y: m * x})), 
+      {x: "x", y: "y", stroke: "red", strokeWidth: 3}),
+      
+    // 3. Blue Line g(x)
+    Plot.line(d3.range(-5, 5.1, 0.1).map(x => ({x, y: x + b})), 
+      {x: "x", y: "y", stroke: "blue", strokeWidth: 3}),
+      
+    // 4. Green Line Sum
+    Plot.line(d3.range(-5, 5.1, 0.1).map(x => ({x, y: (m * x) + (x + b)})), 
+      {x: "x", y: "y", stroke: "green", strokeWidth: 5}),
+
+    // 5. Dynamic Text Labels
+    Plot.text([
+      {x: -3, y: 12, text: `f(x) = ${m}x`, color: "red"},
+      {x: 0,  y: 12, text: `g(x) = x ${b >= 0 ? "+" : ""} ${b}`, color: "blue"},
+      {x: 3,  y: 12, text: `Sum = ${m+1}x ${b >= 0 ? "+" : ""} ${b}`, color: "green"}
+    ], {
+      x: "x", y: "y", text: "text", fill: "color", fontSize: 20, fontWeight: "bold", stroke: "white", strokeWidth: 4
+    })
+  ]
+})
+
+```
+
+---
+
+# Part 2: Division of Functions
+
+## Video Tutorial: Polynomial Long Division
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_FSXJmESFmQ?si=ne9GczeT7SSdEtr-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<small>Source: The Organic Chemistry Tutor</small>
+
+## Definition
+
+$$ \left(\frac{f}{g}\right)(x) = \frac{f(x)}{g(x)}, \quad \text{where } g(x) \neq 0 $$
+
+The domain is the intersection of domains, **excluding** any  that makes the denominator zero.
+
+## Example 1: Factoring (Simplifying)
+
+Let $f(x) = x^2 - 9$ and $g(x) = x - 3$.
+
+$$ \left(\frac{f}{g}\right)(x) = \frac{x^2 - 9}{x - 3} = \frac{(x+3)(x-3)}{x-3}=x+3$$
+
+* Restriction: $x \neq 3$ (from original denominator). That is $D_{f/g}=(-\infty,3)\cup(3,\infty)=\mathbb{R}\setminus\{3\}$
+
+## Example 2: Long Division
+
+Divide $f(x) = 3x^2 + 7x + 5$ by $g(x) = x + 2$.
+
+### Solution
+
+$$\require{enclose}
+\begin{array}{rll}
+3x + 1 && \\[-3pt]
+x + 2 \enclose{longdiv}{3x^2 + 7x + 5}\kern-.2ex \\[-3pt]
+\underline{-(3x^2 + 6x)} \phantom{+ 5} && \\[-3pt]
+x + 5 && \\[-3pt]
+\underline{-(x + 2)} && \\[-3pt]
+3 && (\text{Remainder})
+\end{array}$$
+
+* Quotient: $3x + 1 + \frac{3}{x+2}$
+* Restriction: $x\neq-2$
+* Domain: $D_{f/g}=\mathbb{R}\setminus\{-2\}$
+
+
+
+## Example 3: Complex Fractions
+
+Let $f(x)=\frac{x}{x+1}$ and $g(x)=\frac{2}{x}$.
+
+$$ \left(\frac{f}{g}\right)(x) = \frac{\frac{x}{x+1}}{\frac{2}{x}} $$
+
+Multiply by the reciprocal of the divisor:
+$$ \frac{x}{x+1} \cdot \frac{x}{2} = \mathbf{\frac{x^2}{2(x+1)}} $$
+
+* Domain: $x \neq -1$ and $x \neq 0$, so $D_{f/g}=\mathbb{R}\setminus\{-1,0\}=(-\infty,-1)\cup(-1,0)\cup(0,\infty)=\{x\in \mathbb{R}|x\neq-1,x\neq0\}$
+
+---
+
+# Part 3: Composition ($f \circ g$)
+
+## Video Tutorial: Composition
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tZRfNSZ1Gww?si=aJ3eaDWmUY2_unEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<small>Source: The Organic Chemistry Tutor</small>
+
+## Concept & Visualization
+
+The output of the first function ($g$) becomes the input of the second ($f$).
+
+```{mermaid}
+graph LR
+    A[Input x] -->|g| B[Output g]
+    B -->|f| C[Final Output]
+    style A fill:#fff,stroke:#333
+    style B fill:#ffa,stroke:#333
+    style C fill:#afa,stroke:#333
+
+```
+
+## Example 1: Basic Polynomials
+
+Let $f(x) = 2x - 1$ and $g(x) = x^2$.
+
+**A. Find $(f\circ g)(x)$**
+$$ f(g(x)) = f(x^2) = 2(x^2) - 1 = \mathbf{2x^2 - 1} $$
+
+**B. Find $(g\circ f)(x)$**
+$$ g(f(x)) = g(2x-1) = (2x-1)^2 = \mathbf{4x^2 - 4x + 1} $$
+
+## Example 2: Radical Functions
+
+Let $f(x) = \sqrt{x}$ and $g(x) = x - 2$.
+
+**Find $(f \circ g)(x)$:**
+
+$$ f(g(x)) = f(x-2) = \mathbf{\sqrt{x-2}} $$
+*Domain:* $\{x|x \ge 2\}=[2,\infty)$.
+
+**Find $(g \circ f)(x)$:**
+
+$$ g(f(x)) = g(\sqrt{x}) = \mathbf{\sqrt{x} - 2} $$
+
+*Domain:* $\{x|x\ge 0\}=[0,\infty)$.
+
+## Example 3: Evaluation
+
+Let $p(x) = x^2 + 1$ and $q(x) = 3x$.
+
+**Find $(p \circ q)(2)$:**
+
+**Method 1: Inner first**
+
+1. $q(2) = 3(2) = 6$
+2. $p(q(2)) = p(6) = 6^2 + 1 = 37$
+
+**Method 2: Equation first**
+
+1. $p(q(x)) = p(3x) = (3x)^2 + 1 = 9x^2 + 1$
+2. $9(2)^2 + 1 = 36 + 1 = 37$
+
+---
+
+## Summary
+
+| Concept | Key Takeaway |
+| --- | --- |
+| **Add/Sub/Mult** | Combine outputs. **Intersect** domains. |
+| **Division** | Denom $\neq0$. Use factoring or long division. |
+| **Composition** | Order matters! Inside function goes first. |
