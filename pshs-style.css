@@ -1,0 +1,140 @@
+/* 1. IMPORT BALSAMIQ SANS FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* 2. PSHS COLOR PALETTE */
+:root {
+  --pshs-maroon: #800000;
+  --pshs-gold: #FFD700;
+  --pshs-gray: #333333;
+}
+
+/* 3. GENERAL SLIDE STYLING */
+.reveal .slide-background {
+  background-color: #fafafa; /* Slightly warmer white for "paper" feel */
+}
+
+/* Apply Balsamiq Sans to all general text */
+.reveal {
+  font-family: 'Balsamiq Sans', cursive !important;
+  color: var(--pshs-gray);
+  font-size: 32px; /* Slightly larger base size for readability */
+}
+
+/* Headings */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  color: var(--pshs-maroon) !important;
+  font-family: 'Balsamiq Sans', cursive !important;
+  font-weight: 700;
+}
+
+/* Title Slide Specifics */
+.reveal .title {
+  color: var(--pshs-maroon) !important;
+  border-bottom: 5px solid var(--pshs-gold);
+  padding-bottom: 20px;
+}
+.reveal .subtitle {
+  color: var(--pshs-gray) !important;
+  font-weight: 400;
+}
+
+/* 4. CUSTOM COMPONENTS */
+
+/* Links */
+.reveal a {
+  color: var(--pshs-maroon);
+  text-decoration: underline;
+}
+.reveal a:hover {
+  color: var(--pshs-gold);
+}
+
+/* Activity Box */
+.activity-box {
+  background-color: #fff8dc; /* Cornsilk color (like a post-it note) */
+  border-left: 8px solid var(--pshs-maroon);
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1); /* Hard shadow for "sticker" effect */
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+/* Hook Container */
+.hook-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 40px;
+}
+
+/* --- FORCE BALSAMIQ SANS ON MATHJAX --- */
+/* This makes the equations look hand-written */
+
+mjx-container {
+  font-family: 'Balsamiq Sans', cursive !important;
+  font-size: 1.15em !important; 
+  color: var(--pshs-maroon);
+}
+
+/* Variables (x, y) */
+mjx-i {
+  font-family: 'Balsamiq Sans', cursive !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+}
+
+/* Numbers (1, 2, 3) */
+mjx-n {
+  font-family: 'Balsamiq Sans', cursive !important;
+}
+
+/* Operators (+, =) */
+mjx-mo {
+  font-family: 'Balsamiq Sans', cursive !important;
+}
+
+
+/* HIGHLIGHTER EFFECT */
+.highlight-yellow.current-fragment {
+  background-color: #FFD700 !important; /* PSHS Gold */
+  color: #000 !important;               /* Black text for contrast */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Ensure non-highlighted state is clean */
+.highlight-yellow {
+  transition: background-color 0.3s ease;
+  padding: 2px 5px;
+}
+
+.highlight-yellow.current-fragment {
+  background-color: #FFD700 !important; /* PSHS Gold */
+  color: #000 !important;               /* Black text for contrast */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+
+/* --- PSHS BLUE HIGHLIGHTER --- */
+.highlight-blue.current-fragment {
+  background-color: #003366 !important; /* Official PSHS Dark Blue */
+  color: #ffffff !important;            /* White text for contrast */
+  border-radius: 5px;
+  padding: 2px 5px;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.5); /* Blue Glow */
+  transition: all 0.3s ease;
+}
+
+/* Ensure non-highlighted state is clean */
+.highlight-blue {
+  transition: background-color 0.3s ease;
+  padding: 2px 5px;
+}
+
+/* Optional: Fade out non-active elements slightly */
+.highlight-blue:not(.current-fragment) {
+  transition: background-color 0.3s ease;
+  padding: 2px 5px;
+  color: #ffffff;
+}

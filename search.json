@@ -25,7 +25,7 @@
     "href": "FunctionOperations.html#example-1-polynomials",
     "title": "Operations on Functions",
     "section": "Example 1: Polynomials",
-    "text": "Example 1: Polynomials\nLet \\(f(x) = 3x + 2\\) and \\(g(x) = x - 5\\).\nAddition: \\[(f+g)(x) = (3x+2) + (x-5) = \\mathbf{4x - 3}\\]\nSubtraction: \\[(f-g)(x) = (3x+2) - (x-5) = \\mathbf{2x + 7}\\]\nMultiplication: \\[(f \\cdot g)(x) = (3x+2)(x-5) = \\mathbf{3x^2 - 13x - 10}\\]\nDomain:\n\n\\(D_f = \\mathbb{R}\\)\n\\(D_g = \\mathbb{R}\\)\n\\(D_{f\\cap g} = \\mathbb{R}\\)"
+    "text": "Example 1: Polynomials\nLet \\(f(x) = 3x + 2\\) and \\(g(x) = x - 5\\).\nAddition: \\[(f+g)(x) = f(x) + g(x) = (3x+2) + (x-5) = \\mathbf{4x - 3}\\]\nSubtraction: \\[(f-g)(x) = f(x) - g(x) = (3x+2) - (x-5) = \\mathbf{2x + 7}\\]\nMultiplication: \\[(f \\cdot g)(x) = f(x)\\cdot g(x) = (3x+2)(x-5) = \\mathbf{3x^2 - 13x - 10}\\]\nDomain:\n\n\\(D_f = \\mathbb{R}\\)\n\\(D_g = \\mathbb{R}\\)\n\\(D_{f}\\cap D_g = \\mathbb{R}\\)"
   },
   {
     "objectID": "FunctionOperations.html#example-2-radicals-domain-focus",
@@ -75,6 +75,27 @@
     "title": "Operations on Functions",
     "section": "Example 3: Complex Fractions",
     "text": "Example 3: Complex Fractions\nLet \\(f(x)=\\frac{x}{x+1}\\) and \\(g(x)=\\frac{2}{x}\\).\n\\[ \\left(\\frac{f}{g}\\right)(x) = \\frac{\\frac{x}{x+1}}{\\frac{2}{x}} \\]\nMultiply by the reciprocal of the divisor: \\[ \\frac{x}{x+1} \\cdot \\frac{x}{2} = \\mathbf{\\frac{x^2}{2(x+1)}} \\]\n\nDomain: \\(x \\neq -1\\) and \\(x \\neq 0\\), so \\(D_{f/g}=\\mathbb{R}\\setminus\\{-1,0\\}=(-\\infty,-1)\\cup(-1,0)\\cup(0,\\infty)=\\{x\\in \\mathbb{R}|x\\neq-1,x\\neq0\\}\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#evaluating-function-operations",
+    "href": "FunctionOperations.html#evaluating-function-operations",
+    "title": "Operations on Functions",
+    "section": "Evaluating Function Operations",
+    "text": "Evaluating Function Operations\nIt is often easier to evaluate the functions individually at the specific number first, rather than finding the general formula.\nGiven: \\(f(x) = x^2 - 4\\) and \\(g(x) = x + 3\\).\nTask: Evaluate \\((f+g)(2)\\).\n\\[(f+g)(2) = f(2) + g(2)\\]\n\nEvaluate \\(f(2)\\): \\(2^2 - 4 = 4 - 4 = 0\\)\nEvaluate \\(g(2)\\): \\(2 + 3 = 5\\)\nAdd results: \\(0 + 5 = \\mathbf{5}\\)\n\n\nNote: \\((f+g)(2)\\) means we use the input \\(x=2\\) for both functions."
+  },
+  {
+    "objectID": "FunctionOperations.html#evaluating-with-different-inputs",
+    "href": "FunctionOperations.html#evaluating-with-different-inputs",
+    "title": "Operations on Functions",
+    "section": "Evaluating with Different Inputs",
+    "text": "Evaluating with Different Inputs\nSometimes you are asked to combine functions using different inputs.\nTask: Evaluate \\(f(2) - g(-3)\\).\nWarning: This is NOT \\((f-g)(2)\\) or \\((f-g)(-3)\\). You must treat them separately.\n\nEvaluate \\(f(2)\\): \\(0\\) (calculated previously)\nEvaluate \\(g(-3)\\): \\((-3) + 3 = 0\\)\nSubtract: \\(f(2) - g(-3) = 0 - 0 = \\mathbf{0}\\)"
+  },
+  {
+    "objectID": "FunctionOperations.html#practice-products-and-quotients",
+    "href": "FunctionOperations.html#practice-products-and-quotients",
+    "title": "Operations on Functions",
+    "section": "Practice: Products and Quotients",
+    "text": "Practice: Products and Quotients\nGiven: \\(h(x) = \\sqrt{x+1}\\) and \\(k(x) = x - 2\\).\nA. Find \\((h \\cdot k)(3)\\) \\[h(3) \\cdot k(3) = (\\sqrt{3+1})(3-2) = (\\sqrt{4})(1) = 2 \\cdot 1 = \\mathbf{2}\\]\nB. Find \\(\\left(\\frac{k}{h}\\right)(8)\\) \\[\\frac{k(8)}{h(8)} = \\frac{8-2}{\\sqrt{8+1}} = \\frac{6}{\\sqrt{9}} = \\frac{6}{3} = \\mathbf{2}\\]"
   },
   {
     "objectID": "FunctionOperations.html#video-tutorial-composition",

@@ -96,7 +96,7 @@
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-816793a8a4a837d14f6ea458e2f1c5cb.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pshs-style.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -297,14 +297,14 @@ Joseph S. Tabadero, Jr.
 <section id="example-1-polynomials" class="slide level2">
 <h2>Example 1: Polynomials</h2>
 <p>Let <span class="math inline">\(f(x) = 3x + 2\)</span> and <span class="math inline">\(g(x) = x - 5\)</span>.</p>
-<p><strong>Addition:</strong> <span class="math display">\[(f+g)(x) = (3x+2) + (x-5) = \mathbf{4x - 3}\]</span></p>
-<p><strong>Subtraction:</strong> <span class="math display">\[(f-g)(x) = (3x+2) - (x-5) = \mathbf{2x + 7}\]</span></p>
-<p><strong>Multiplication:</strong> <span class="math display">\[(f \cdot g)(x) = (3x+2)(x-5) = \mathbf{3x^2 - 13x - 10}\]</span></p>
+<p><strong>Addition:</strong> <span class="math display">\[(f+g)(x) = f(x) + g(x) = (3x+2) + (x-5) = \mathbf{4x - 3}\]</span></p>
+<p><strong>Subtraction:</strong> <span class="math display">\[(f-g)(x) = f(x) - g(x) = (3x+2) - (x-5) = \mathbf{2x + 7}\]</span></p>
+<p><strong>Multiplication:</strong> <span class="math display">\[(f \cdot g)(x) = f(x)\cdot g(x) = (3x+2)(x-5) = \mathbf{3x^2 - 13x - 10}\]</span></p>
 <p><strong>Domain:</strong></p>
 <ul>
 <li><span class="math inline">\(D_f = \mathbb{R}\)</span></li>
 <li><span class="math inline">\(D_g = \mathbb{R}\)</span></li>
-<li><span class="math inline">\(D_{f\cap g} = \mathbb{R}\)</span></li>
+<li><span class="math inline">\(D_{f}\cap D_g = \mathbb{R}\)</span></li>
 </ul>
 </section>
 <section id="example-2-radicals-domain-focus" class="slide level2 scrollable">
@@ -448,6 +448,38 @@ x + 5 &amp;&amp; \\[-3pt]
 <ul>
 <li>Domain: <span class="math inline">\(x \neq -1\)</span> and <span class="math inline">\(x \neq 0\)</span>, so <span class="math inline">\(D_{f/g}=\mathbb{R}\setminus\{-1,0\}=(-\infty,-1)\cup(-1,0)\cup(0,\infty)=\{x\in \mathbb{R}|x\neq-1,x\neq0\}\)</span></li>
 </ul>
+</section>
+<section id="evaluating-function-operations" class="slide level2 scrollable">
+<h2>Evaluating Function Operations</h2>
+<p>It is often easier to evaluate the functions <em>individually</em> at the specific number first, rather than finding the general formula.</p>
+<p><strong>Given:</strong> <span class="math inline">\(f(x) = x^2 - 4\)</span> and <span class="math inline">\(g(x) = x + 3\)</span>.</p>
+<p><strong>Task:</strong> Evaluate <span class="math inline">\((f+g)(2)\)</span>.</p>
+<p><span class="math display">\[(f+g)(2) = f(2) + g(2)\]</span></p>
+<ol type="1">
+<li><strong>Evaluate <span class="math inline">\(f(2)\)</span>:</strong> <span class="math inline">\(2^2 - 4 = 4 - 4 = 0\)</span></li>
+<li><strong>Evaluate <span class="math inline">\(g(2)\)</span>:</strong> <span class="math inline">\(2 + 3 = 5\)</span></li>
+<li><strong>Add results:</strong> <span class="math inline">\(0 + 5 = \mathbf{5}\)</span></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> <span class="math inline">\((f+g)(2)\)</span> means we use the input <span class="math inline">\(x=2\)</span> for <strong>both</strong> functions.</p>
+</blockquote>
+</section>
+<section id="evaluating-with-different-inputs" class="slide level2 scrollable">
+<h2>Evaluating with Different Inputs</h2>
+<p>Sometimes you are asked to combine functions using <strong>different</strong> inputs.</p>
+<p><strong>Task:</strong> Evaluate <span class="math inline">\(f(2) - g(-3)\)</span>.</p>
+<p><strong>Warning:</strong> This is <strong>NOT</strong> <span class="math inline">\((f-g)(2)\)</span> or <span class="math inline">\((f-g)(-3)\)</span>. You must treat them separately.</p>
+<ol type="1">
+<li><strong>Evaluate <span class="math inline">\(f(2)\)</span>:</strong> <span class="math inline">\(0\)</span> (calculated previously)</li>
+<li><strong>Evaluate <span class="math inline">\(g(-3)\)</span>:</strong> <span class="math inline">\((-3) + 3 = 0\)</span></li>
+<li><strong>Subtract:</strong> <span class="math inline">\(f(2) - g(-3) = 0 - 0 = \mathbf{0}\)</span></li>
+</ol>
+</section>
+<section id="practice-products-and-quotients" class="slide level2">
+<h2>Practice: Products and Quotients</h2>
+<p><strong>Given:</strong> <span class="math inline">\(h(x) = \sqrt{x+1}\)</span> and <span class="math inline">\(k(x) = x - 2\)</span>.</p>
+<p><strong>A. Find <span class="math inline">\((h \cdot k)(3)\)</span></strong> <span class="math display">\[h(3) \cdot k(3) = (\sqrt{3+1})(3-2) = (\sqrt{4})(1) = 2 \cdot 1 = \mathbf{2}\]</span></p>
+<p><strong>B. Find <span class="math inline">\(\left(\frac{k}{h}\right)(8)\)</span></strong> <span class="math display">\[\frac{k(8)}{h(8)} = \frac{8-2}{\sqrt{8+1}} = \frac{6}{\sqrt{9}} = \frac{6}{3} = \mathbf{2}\]</span></p>
 </section>
 <section class="slide level2">
 
